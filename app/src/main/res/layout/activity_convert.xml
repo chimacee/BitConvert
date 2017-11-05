@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll"
+    android:background="@drawable/bit_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conversion Page"
+        android:textSize="23sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="#FF1744"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter amount to be converted below and select conversion type from the list"
+        android:textSize="17sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="#FF1744"/>
+
+    <EditText
+        android:id="@+id/input_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter amount here"
+        android:textColorHint="@android:color/white"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:text="36742"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#FF1744"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/conversion_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/bit_dollars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert from BitCoin to US Dollars"
+            android:textSize="16sp"
+            android:textColor="#FF1744"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/bit_pounds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert from BitCoin to GB Pounds"
+            android:textSize="16sp"
+            android:textColor="#FF1744"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/bit_naira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert from BitCoin to Nigerian Naira"
+            android:textSize="16sp"
+            android:textColor="#FF1744"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/dollars_bit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert from US Dollars to BitCoin"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"
+            android:textColor="#FF1744"/>
+
+        <RadioButton
+            android:id="@+id/pounds_bit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert from GB Pounds to BitCoin"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            android:textColor="#FF1744"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/naira_bit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert from Nigerian Naira to BitCoin"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="#FF1744"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

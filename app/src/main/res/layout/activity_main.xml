@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/bit_back"     
+    tools:context="com.example.android.bitconvert.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crypto_cardview"
+            android:layout_margin="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/bitcoin_logo"
+                    android:layout_margin="8dp"/>
+
+                <TextView
+                    android:id="@+id/coin_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_horizontal"
+                    android:text="Bitcoin (BTC)"
+                    android:textColor="#00B0FF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/coin_name"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_horizontal"
+                    android:text="Current Exchange Rate:\n 1 BTC = "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#00B0FF"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/header"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/header"
+                        android:layout_weight="0.57"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:id="@+id/naira_logo"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="end"
+                            android:src="@drawable/naira_sign" />
+
+                        <ImageView
+                            android:id="@+id/dollar_logo"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_gravity="end"
+                            android:src="@drawable/dollar_logo" />
+
+                        <ImageView
+                            android:id="@+id/pounds_logo"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="end"
+                            android:src="@drawable/pound_logo" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/header"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/naira_exchange_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Loading..."
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/dollar_exchange_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Loading..."
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/pounds_exchange_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Loading..."
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Tap screen to go to conversion page"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+</LinearLayout>
